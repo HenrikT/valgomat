@@ -1,0 +1,23 @@
+<div ng-controller="questionController">
+    <div class="container">
+        <!--Header row-->
+        <div class="row">
+            <div class="col-sm-4">
+                <button type="button" class="btn btn-primary btn-lg" ng-click="previousPage()">Tilbake</button>
+            </div>
+            <div class="col-sm-8 col-last-election col-centered">
+                <h2>Hvilken kommune er du fra?</h2>
+            </div>
+        </div>
+        <hr>
+
+        <div class="row-list" ng-repeat="county in counties| filter: answers.county">
+            <div ng-repeat="municipality in county" ng-if="$even">
+                <div ng-repeat="m in municipality">
+                    <li class="list-group-item" ng-click="answers.municipality = m; nextPage()">{{m}}</li>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>

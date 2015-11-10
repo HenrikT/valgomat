@@ -1,0 +1,18 @@
+<div ng-controller="questionController">
+    <div class="container">
+        <!--Header row-->
+        <div class="row">
+            <div class="col-sm-4">
+                <button type="button" class="btn btn-primary btn-lg" ng-click="previousPage()">Tilbake</button>
+            </div>
+            <div class="col-sm-4 categoryCol">
+                <h2>Hvor gammel er du?</h2>
+            </div>
+        </div>
+        <hr>
+
+        <div class="row-list" ng-repeat="a in ages">
+            <li class="list-group-item" ng-click="answers.age = a.cat; nextPage()">{{a.cat}}</li>
+        </div>
+    </div>
+</div>
