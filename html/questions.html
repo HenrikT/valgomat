@@ -1,0 +1,66 @@
+<div ng-controller="questionController">
+    <div ng-repeat="question in questions" ng-if="question.id === questionId">
+        <div class="container">
+
+            <!--Header row-->
+            <div class="row">
+                <div class="col-sm-4">
+                    <button type="button" class="btn btn-primary btn-lg" ng-click="previousPage()">Tilbake</button>
+                </div>
+                <div class="col-sm-8 categoryCol">
+                    <h3>{{question.id + 1}} av 20 | Kategori: {{question.category}}</h3>
+                </div>
+            </div>
+            <hr>
+
+
+            <!--Question row-->
+            <div class="row questionRow">
+                <div class="col-sm-12">
+                    <h2>Spørsmål: {{question.q}}</h2>
+                    </div>
+                </div>
+            </div>
+
+            <!--Smiley Row-->
+            <div class="row smileyRow">
+
+                <div class="col-md-5ths col-sm-2 col-centered col-xs-2">
+                    <img class="smileyIcon" src="img/alt-1.png"
+                         ng-click="showLower = true; questions[question.id].importance = -2">
+                    <p col-centered>Helt Uenig</p>
+                </div>
+                <div class="col-md-5ths col-sm-2 col-centered col-xs-2">
+                    <img class="smileyIcon" src="img/alt-2.png"
+                         ng-click="showLower = true; questions[question.id].importance = -1">
+                    <p>Litt Uenig</p>
+                </div>
+                <div class="col-md-5ths col-sm-2 col-centered col-xs-2">
+                    <img class="smileyIcon" src="img/alt-3.png"
+                         ng-click="nextPage(); questions[question.id].importance = 0">
+                    <p>Nøytralt Enig</p>
+                </div>
+                <div class="col-md-5ths col-sm-2 col-centered col-xs-2">
+                    <img class="smileyIcon" src="img/alt-4.png"
+                         ng-click="showLower = true; questions[question.id].importance = 1">
+                    <p>Litt Enig</p>
+                </div>
+                <div class="col-md-5ths col-sm-2 col-centered col-xs-2">
+                    <img class="smileyIcon" src="img/alt-5.png"
+                         ng-click="showLower = true; questions[question.id].importance = 2">
+                    <p>Helt Enig</p>
+                </div>
+            </div>
+
+
+            <div class="row importanceRow" ng-show="showLower">
+                <div class="col-md-12">
+                    <h2>Hvor viktig er dette for deg?</h2>
+                    <button type="button" class="btn btn-primary btn-lg btn-importance" ng-click="nextPage()">Uviktig</button>
+                    <button type="button" class="btn btn-primary btn-lg btn-importance" ng-click="questions[question.id].importance = questions[question.id].importance * 2; nextPage()">Litt Viktig</button>
+                    <button type="button" class="btn btn-primary btn-lg btn-importance" ng-click="questions[question.id].importance = questions[question.id].importance * 3; nextPage()">Veldig viktig</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

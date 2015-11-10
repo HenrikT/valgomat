@@ -1,0 +1,30 @@
+<div ng-controller="questionController">
+    <div class="container">
+        <div class="row">
+            <h2>Velkommen til min valgomat!</h2>
+        </div>
+
+        <hr>
+
+        <div class="row">
+            <div class="col-sm-12">
+                <h2>Velg kjønn for å begynne:</h2>
+            </div>
+        </div>
+
+        <div class="row genderRow">
+            <div class="col-sm-6">
+                <img class="genderImg" src="img/male.png" ng-click="answers.gender = 'Male'; nextPage()">
+
+                <p><strong>Mann</strong></p>
+            </div>
+
+            <div class="col-sm-6">
+                <img class="genderImg" src="img/female.png" ng-click="answers.gender = 'Female'; nextPage()">
+
+                <p><strong>Kvinne</strong></p>
+            </div>
+
+        </div>
+    </div>
+</div>

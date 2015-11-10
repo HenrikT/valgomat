@@ -1,0 +1,407 @@
+/* Space out content a bit */
+
+/*Animate*/
+.animate-show {
+    line-height: 20px;
+    opacity: 1;
+    padding: 10px;
+    border: 1px solid black;
+    background: white;
+}
+
+.animate-show.ng-hide-add, .animate-show.ng-hide-remove {
+    transition: all linear 0.5s;
+}
+
+.animate-show.ng-hide {
+    line-height: 0;
+    opacity: 0;
+    padding: 0 10px;
+}
+
+.check-element {
+    padding: 10px;
+    border: 1px solid black;
+    background: white;
+}
+
+.row-centered {
+    text-align: center;
+}
+
+.col-centered {
+    display: inline-block;
+    float: none;
+    /* reset the text-align */
+    text-align: left;
+    /* inline-block space fix */
+    margin-right: -4px;
+}
+
+.questionRow {
+    margin-bottom: 100px;
+    margin-top: 50px;
+}
+
+.smileyRow {
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.categoryCol {
+    margin-top: 8px;
+}
+
+/*bootstrap*/
+.col-xs-5ths,
+.col-sm-5ths,
+.col-md-5ths,
+.col-lg-5ths {
+    position: relative;
+    min-height: 1px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+p {
+    font-size: 14px;
+    text-align: center;
+}
+
+.col-xs-5ths {
+    width: 20%;
+    float: left;
+}
+
+@media (min-width: 768px) {
+    .col-sm-5ths {
+        width: 20%;
+        float: left;
+    }
+}
+
+@media (min-width: 992px) {
+    .col-md-5ths {
+        width: 20%;
+        float: left;
+    }
+}
+
+@media (min-width: 1200px) {
+    .col-lg-5ths {
+        width: 20%;
+        float: left;
+    }
+}
+
+body {
+    background-color: #e8e8e8;;
+    padding-top: 0px;
+    padding-bottom: 20px;
+}
+
+#questionHeader {
+    margin-top: 10%;
+}
+
+#resultsHeader {
+    margin-top: 20px;
+}
+
+#smileyBox {
+    display: block;
+    height: 100px;
+    margin: 5px;
+    position: absolute;
+    width: 100%;
+    top: 50%;
+}
+
+.genderRow {
+    margin-top: 100px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+#importanceBox {
+    display: block;
+    height: 100px;
+    margin: 0 auto;
+    position: absolute;
+    width: 97%;
+    bottom: 30px;
+
+}
+
+.smileyIcon {
+    width: 100%;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.resultsChart {
+    width: 500px;
+    height: 50px;
+}
+
+.smileyIcon:hover {
+    background-color: #b8b8b8;
+    -moz-border-radius: 105px;
+    -webkit-border-radius: 105px;
+    border-radius: 50%;
+}
+
+.county {
+    max-height: 50%;
+}
+
+.list-group-item {
+    /*margin-left: auto;*/
+    /*margin-right: auto;*/
+    /*width: 10em*/
+    padding: 4px;
+}
+
+.list-group-item:hover {
+    /*margin-left: auto;*/
+    /*margin-right: auto;*/
+    /*width: 10em*/
+    background-color: #e8e8e8;
+}
+
+.genderImg {
+    width: 60%;
+    cursor: pointer;
+}
+
+.genderHeader {
+    margin-top: 150px;
+}
+
+.genderImg:hover {
+    background-color: #f8f8f8;
+}
+
+li {
+    cursor: pointer;
+    list-style-type: none
+}
+
+.list-group-item {
+    font-size: 18px;
+}
+
+.row-list {
+    margin-top: 2px;
+}
+
+.col-last-election {
+    text-align: left;
+}
+
+#maleText {
+    display: inline;
+    padding-right: 8%;
+}
+
+#femaleText {
+    display: inline;
+}
+
+.btn {
+    background-color: #222343;
+    border-color: #222343;
+    margin-top: 4%;
+    float: left;
+}
+
+.btn:active {
+    background-color: #222343;
+    border-color: #222343;
+}
+
+.btn-primary:active {
+    color: #222343;
+    background-color: #222343;
+    border-color: #222343;
+}
+
+.btn:hover {
+    background-color: #222343;
+    border-color: black;
+}
+
+.btn-db {
+    float: none;
+}
+
+.btn-importance {
+    float: none;
+
+}
+
+.navbar {
+    background-color: #222343;
+}
+
+.navbar-default .navbar-brand {
+    color: white;
+}
+
+/* Redefining bootstrap styles */
+.container .jumbotron,
+.nav-pills > li > a,
+.btn, .form-control, pre {
+    border-radius: 10px;
+}
+
+:not(pre) > code[class*="language-"], pre[class*="language-"] {
+    background: #FFF;
+}
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.marketing,
+.footer {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Custom page header */
+.header {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+/* Make the masthead heading the same height as the navigation */
+.header h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 40px;
+    padding-bottom: 19px;
+}
+
+/* Custom page footer */
+.footer {
+    padding-top: 19px;
+    color: #777;
+    border-top: 1px solid #e5e5e5;
+}
+
+/* Customize container */
+@media (min-width: 768px) {
+    .container {
+        max-width: 65%;
+        width: auto;
+    }
+}
+
+.container-narrow > hr {
+    margin: 30px 0;
+}
+
+.jumbotron {
+    text-align: center;
+    border-bottom: 1px solid #e5e5e5;
+    min-height: 1000px;
+    max-height: 10px;
+}
+
+.content {
+
+}
+
+/*.jumbotron .btn {*/
+/*margin-top: 10px;*/
+/*}*/
+
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+    /* Remove the padding we set earlier */
+    .header,
+    .marketing,
+    .footer {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    /* Space out the masthead */
+    .header {
+        margin-bottom: 0px;
+    }
+
+    /* Remove the bottom border on the jumbotron for visual effect */
+    .jumbotron {
+        border-bottom: 0;
+    }
+}
+
+/* Pages styles */
+.content .page {
+    position: absolute;
+    padding: 10px;
+    background: white;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+
+hr {
+    border: none;
+    height: 3px;
+    background-color: #222343; /* Modern Browsers */
+}
+
+.container .content {
+    position: relative;
+    overflow: hidden;
+    min-height: 800px;
+    padding: 0;
+    margin-bottom: 0;
+}
+
+/* Slide animation */
+.content .page.slide {
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/*.content .page.slide.ng-enter,*/
+/*.content .page.slide.ng-leave {*/
+    /*-webkit-transition: all 0.5s ease;*/
+    /*transition: all 0.5s ease;*/
+/*}*/
+
+.content .page.slide.ng-enter {
+    left: 100%;
+}
+
+.content .page.slide.ng-enter-active {
+    left: 0;
+}
+
+.content .page.slide.ng-leave {
+    left: 0;
+}
+
+.content .page.slide.ng-leave-active {
+    left: -100%;
+}
+
+.reverse .page.slide.ng-enter {
+    left: -100%;
+}
+
+.reverse .page.slide.ng-enter-active {
+    left: 0;
+}
+
+.reverse .page.slide.ng-leave {
+    left: 0;
+}
+
+.reverse .page.slide.ng-leave-active {
+    left: 100%;
+}
